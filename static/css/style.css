@@ -1,0 +1,11 @@
+.navbar-dark .navbar-nav .nav-link {
+    /**Nav elements/ color etc*/
+}
+
+.dropdown-menu {
+    background-color: gray;
+}
+
+.dropdown-item {
+    color: white;
+}
