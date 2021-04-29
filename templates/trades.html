@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StarTrade</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>I'm extending the base template!</h2>
+
     {% for trade in trades %}
         {{ trade.game_name }}<br>
         {{ trade.console_type }}<br>
@@ -14,5 +10,5 @@
         {{ trade.is_negotiable }}<br>
         {{ trade.listing_lenght }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
