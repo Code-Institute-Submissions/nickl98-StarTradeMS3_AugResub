@@ -9,3 +9,9 @@
 .dropdown-item {
     color: white;
 }
+
+
+.flashes p {
+    line-height: 2;
+    color: blue;
+}
