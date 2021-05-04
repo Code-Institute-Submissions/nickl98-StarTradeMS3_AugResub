@@ -24,17 +24,15 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="{{ url_for('get_trades') }}">Home</a>
                 </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Log Out</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
                   </li>
+                  {% if session.user %}
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Account Settings
@@ -43,8 +41,11 @@
                       <a href="{{ url_for('profile', username=session['user']) }}" class="dropdown-item">Profile</a>
                       <a class="dropdown-item" href="#">New Trade</a>
                       <a class="dropdown-item" href="#">Manage Trades</a>
+                      <a class="dropdown-item" href="{{ url_for('logout') }}">Log Out</a>
                     </div>
                   </li>
+                  {% else %}
+                  {% endif %}
               </ul>
             </div>
           </nav>
