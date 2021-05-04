@@ -26,15 +26,6 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Home</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Profile
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">New Trade</a>
-                      <a class="dropdown-item" href="#">Manage Trades</a>
-                    </div>
-                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
                   </li>
@@ -43,6 +34,16 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account Settings
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a href="{{ url_for('profile', username=session['user']) }}" class="dropdown-item">Profile</a>
+                      <a class="dropdown-item" href="#">New Trade</a>
+                      <a class="dropdown-item" href="#">Manage Trades</a>
+                    </div>
                   </li>
               </ul>
             </div>

@@ -30,7 +30,7 @@ def get_trades():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        #check if username is already exists in DB
+        # check if username is already exists in DB
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
         if existing_user:
@@ -43,9 +43,11 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        #put the new user into 'session' cookie
+        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Sign Up was succesful")
+        return redirect(url_for("profile", username=session["user"]))
+
     return render_template("register.html")
 
 
@@ -61,7 +63,10 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
+                    flash("Welcome, {}".format(
+                        request.form.get("username")))
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -73,6 +78,15 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+# The profile page is empty but create a way for users to see thier listings
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # rab the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
 
 
 if __name__ == "__main__":
