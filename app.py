@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_trades")
 def get_trades():
-    trades = mongo.db.trades.find()
+    trades = list(mongo.db.trades.find())
     return render_template("trades.html", trades=trades)
 
 
