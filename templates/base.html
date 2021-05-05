@@ -39,7 +39,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a href="{{ url_for('profile', username=session['user']) }}" class="dropdown-item">Profile</a>
-                      <a class="dropdown-item" href="#">New Trade</a>
+                      <a class="dropdown-item" href="{{ url_for('add_trade') }}">New Trade</a>
                       <a class="dropdown-item" href="#">Manage Trades</a>
                       <a class="dropdown-item" href="{{ url_for('logout') }}">Log Out</a>
                     </div>

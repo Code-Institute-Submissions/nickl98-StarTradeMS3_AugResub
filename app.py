@@ -99,7 +99,13 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
-    
+
+
+@app.route("/add_trade")
+def add_trade():
+    return render_template("add_trade.html")
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
