@@ -1,37 +1,52 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="row justify-content-md-center" id="page-title">List a Item</h3>
+<h3 class="row justify-content-md-center" id="page-title">List a Item</h3>
 
-    <form class="col-sm-12" method="POST" action="">
-        <div class="form-group row">
-          <label for="gametitle" class="col-sm-2 col-form-label">Game Title</label>
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="gametitle" placeholder="Game Title">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="gamedesc" class="col-sm-2 col-form-label">Trade Description</label>
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="gamedesc" placeholder="Trade Description">
-          </div>
-        </div>
-        <div class="form-group row">
-            <label for="inputGroupSelect01" class="col-sm-2 col-form-label">Console</label>
+<div class="row card">
+<form class="col-sm-12" method="POST" action="">
+    <!-- Game Title -->
+    <div class="form-group row">
+        <label for="game_name" class="col-sm-2 col-form-label">Game Title <i class="fas fa-gamepad"></i></label>
             <div class="col-sm-12">
-            <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-            </select>
-          </div>
-         </div> 
-        <div class="form-group row">
-            <div class="col-sm-12">
-              <button type="submit" class="btn btn-primary">Sign in</button>
+                <input type="text" name="game_name" minlength="5" maxlength="15" class="form-control" id="game_name"
+                    placeholder="Game Title" required >
             </div>
+    </div>
+    <!-- Trade Description -->
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="trade_desc">Trade Discription <i class="fas fa-align-left"></i></label>
+        <div class="col-sm-12">
+        <textarea class="form-control" name="trade_desc" id="trade_desc" minlength="5" maxlength="200" rows="3" required></textarea>
+        </div>
+    </div>
+<!-- A switch for (if the trade will be negotable)-->
+    <div class="form-group">
+        <div class="custom-control custom-switch">
+            
+            <input type="checkbox" class="custom-control-input" name="is_negotiable" id="is_negotiable">
+            <label class="custom-control-label" for="is_negotiable">Negotiable <i class="fas fa-exclamation-circle"></i></label>
           </div>
-      </form>
+    </div>
+    
+    <!-- Console selction -->
+    <div class="form-group row">
+        <label for="inputGroupSelect01" class="col-sm-2 col-form-label">Platform</label>
+        <div class="col-sm-12">
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-12 justify-content-md-center">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </div>
+</form>
+</div>
 
 {% endblock %}
