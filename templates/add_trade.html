@@ -7,7 +7,7 @@
 <form class="col-sm-12" method="POST" action="">
     <!-- Game Title -->
     <div class="form-group row">
-        <label for="game_name" class="col-sm-2 col-form-label">Game Title <i class="fas fa-gamepad"></i></label>
+        <label for="game_name" class="col-sm-2 col-form-label"><i class="fas fa-gamepad"></i> Game Title</label>
             <div class="col-sm-12">
                 <input type="text" name="game_name" minlength="5" maxlength="15" class="form-control" id="game_name"
                     placeholder="Game Title" required >
@@ -15,7 +15,7 @@
     </div>
     <!-- Trade Description -->
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label" for="trade_desc">Trade Discription <i class="fas fa-align-left"></i></label>
+        <label class="col-sm-2 col-form-label" for="trade_desc"><i class="far fa-edit"></i> Trade Discription</label>
         <div class="col-sm-12">
         <textarea class="form-control" name="trade_desc" id="trade_desc" minlength="5" maxlength="200" rows="3" required></textarea>
         </div>
@@ -31,14 +31,23 @@
     
     <!-- Console selction -->
     <div class="form-group row">
-        <label for="inputGroupSelect01" class="col-sm-2 col-form-label">Platform</label>
+        <label for="console_name" class="col-sm-2 col-form-label"><i class="fas fa-globe" data-toggle="tooltip" data-placement="right"
+            title="Make sure you pick the correct platform in which the item residess"></i> Gaming Console</label>
         <div class="col-sm-12">
-            <select class="custom-select" id="inputGroupSelect01">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="custom-select" name="console_name" id="console_name" required>
+                <option selected>Choose a console</option>
+                {% for console in console_type %}
+                <option value="{{ console.console_name }}">{{ console.console_name }}</option>
+                {% endfor %}
             </select>
+        </div>
+    </div>
+    <!-- Platform GamerTag / or contact infromation for trading card deals -->
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="gamer_tag">Contact Seller <i class="fas fa-user-friends" data-toggle="tooltip" data-placement="right"
+            title="What is the best way for the buyer to contact you?"></i></label>
+        <div class="col-sm-12">
+        <textarea class="form-control" name="gamer_tag" id="gamer_tag" minlength="5" maxlength="200" rows="3" required></textarea>
         </div>
     </div>
     <div class="form-group row">

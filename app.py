@@ -103,8 +103,8 @@ def logout():
 
 @app.route("/add_trade")
 def add_trade():
-    return render_template("add_trade.html")
-
+    console_type = mongo.db.console_type.find().sort("console_name", 1)
+    return render_template("add_trade.html", console_type=console_type)
 
 
 if __name__ == "__main__":
