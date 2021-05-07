@@ -142,6 +142,13 @@ def edit_trade(trade_id):
         "edit_trade.html", trade=trade, console_type=console_type)
 
 
+@app.route("/delete_trade/<trade_id>")
+def delete_trade(trade_id):
+    mongo.db.trades.remove({"_id": ObjectId(trade_id)})
+    flash("Trade Succesfully Sold")
+    return redirect(url_for("get_trades"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
