@@ -73,3 +73,12 @@ body {
 .datepicker {
     margin-bottom: 3rem;
 }
+
+
+
+/* Button row */
+#btn-row {
+    padding-left: 5px;
+    padding-bottom: 5px;
+    margin: 5px;
+}

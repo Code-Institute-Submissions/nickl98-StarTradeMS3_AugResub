@@ -23,13 +23,17 @@
 
                 </div>
                 <div id="collapseOne-{{loop.index}}" aria-labelledby="headingOne" data-parent="#accordionExample"
-                    class="collapse show">
+                    class="collapse">
                     <div class="card-body p-5">
                         <strong>Tradeable on: {{ trade.console_name }}</strong>
                         <p>{{ trade.trade_desc }}</p>
                         <strong>Contact Seller</strong>
                         <p>{{ trade.gamer_tag }}</p>
                         <p><em>Listed by: {{ trade.created_by }}</em></p>
+                        <div id="#btn-row">
+                            <button  type="button" class="btn btn-success text-center">Item Sold</button>
+                            <button  type="button" class="btn btn-secondary text-center">Edit Trade <i class="fas fa-wrench"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
