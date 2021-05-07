@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="row justify-content-md-center" id="page-title">List a Item</h3>
+<h3 class="row d-flex justify-content-center center-text" id="page-title">List a Item</h3>
 
-<div class="row card">
-<form class="col-sm-12" method="POST" action="">
+<div class="row card" id="back-card">
+<form class="col-sm-12" method="POST" action="{{ url_for('add_trade') }}">
     <!-- Game Title -->
-    <div class="form-group row">
+    <div class="form-group row ">
         <label for="game_name" class="col-sm-2 col-form-label"><i class="fas fa-gamepad"></i> Game Title</label>
             <div class="col-sm-12">
                 <input type="text" name="game_name" minlength="5" maxlength="15" class="form-control" id="game_name"
@@ -50,9 +50,9 @@
         <textarea class="form-control" name="gamer_tag" id="gamer_tag" minlength="5" maxlength="200" rows="3" required></textarea>
         </div>
     </div>
-    <div class="form-group row">
-        <div class="col-sm-12 justify-content-md-center">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+    <div class="form-group row text-center">
+        <div class="col-sm-12 ">
+            <button type="submit" class="btn btn-primary">List Item <i class="fas fa-plus-square right"></i></button>
         </div>
     </div>
 </form>

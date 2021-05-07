@@ -23,10 +23,11 @@
                 <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
                     class="collapse show">
                     <div class="card-body p-5">
-                        <strong>{{ trade.console_type }}</strong>
+                        <strong>Tradeable on: {{ trade.console_name }}</strong>
                         <p>{{ trade.trade_desc }}</p>
                         <strong>Contact Seller</strong>
                         <p>{{ trade.gamer_tag }}</p>
+                        <p><em>Listed by: {{ trade.created_by }}</em></p>
                     </div>
                 </div>
             </div>

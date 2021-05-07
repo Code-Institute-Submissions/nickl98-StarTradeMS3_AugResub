@@ -52,6 +52,11 @@ body {
     min-height: 100vh;
 }
 
+#back-card {
+    background: #654ea3;
+    background: -webkit-linear-gradient(to left, #eaafc8, #654ea3);
+    background: linear-gradient(to left,  #eaafc8, #654ea3);
+}
 
 #page-title {
     font-weight: 600;

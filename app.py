@@ -101,8 +101,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_trade")
+@app.route("/add_trade", methods=["GET", "POST"])
 def add_trade():
+    if request.method == "POST":
+        is_negotiable = "on" if request.form.get("is_negotiable") else "off"
+        trade = {
+            "console_name": request.form.get("console_name"),
+            "game_name": request.form.get("game_name"),
+            "trade_desc": request.form.get("trade_desc"),
+            "is_negotiable": is_negotiable,
+            "gamer_tag": request.form.get("gamer_tag"),
+            "created_by": session["user"]
+        }
+        mongo.db.trades.insert_one(trade)
+        flash("Trade Successfully Listed")
+        return redirect(url_for("get_trades"))
+        
     console_type = mongo.db.console_type.find().sort("console_name", 1)
     return render_template("add_trade.html", console_type=console_type)
 
