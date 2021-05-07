@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="row d-flex justify-content-center center-text" id="page-title">All Current Trades</h3>
+
 <div class="row">
     <div class="col-lg-9 mx-auto">
         <!-- Accordion -->
@@ -10,7 +12,7 @@
             <div class="card">
                 <div id="headingOne" class="card-header bg-white shadow-sm border-0">
                     <h2 class="mb-0">
-                        <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        <button type="button" data-toggle="collapse" data-target="#collapseOne-{{loop.index}}" aria-expanded="true"
                             aria-controls="collapseOne"
                             class="btn btn-link text-dark font-weight-bold text-uppercase">Game : {{ trade.game_name }} <i class="fas fa-caret-down"></i></button>
                         {% if trade.is_negotiable == "on" %}
@@ -20,7 +22,7 @@
                     </h2>
 
                 </div>
-                <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
+                <div id="collapseOne-{{loop.index}}" aria-labelledby="headingOne" data-parent="#accordionExample"
                     class="collapse show">
                     <div class="card-body p-5">
                         <strong>Tradeable on: {{ trade.console_name }}</strong>
