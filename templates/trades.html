@@ -31,8 +31,10 @@
                         <p>{{ trade.gamer_tag }}</p>
                         <p><em>Listed by: {{ trade.created_by }}</em></p>
                         <div id="#btn-row">
-                            <a href=""><button type="button" class="btn btn-success text-center">Item Sold</button></a>
-                            <a href="{{ url_for('edit_trade', trade_id=trade._id) }}"><button type="button" class="btn btn-secondary text-center">Edit Trade <i class="fas fa-wrench"></i></button></a>
+                            {% if session.user|lower == trade.created_by|lower %}
+                                <a href=""><button type="button" class="btn btn-success text-center">Item Sold</button></a>
+                                <a href="{{ url_for('edit_trade', trade_id=trade._id) }}"><button type="button" class="btn btn-secondary text-center">Edit Trade <i class="fas fa-wrench"></i></button></a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

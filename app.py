@@ -116,16 +116,30 @@ def add_trade():
         mongo.db.trades.insert_one(trade)
         flash("Trade Successfully Listed")
         return redirect(url_for("get_trades"))
-        
+
     console_type = mongo.db.console_type.find().sort("console_name", 1)
     return render_template("add_trade.html", console_type=console_type)
 
 
 @app.route("/edit_trade/<trade_id>", methods=["GET", "POST"])
 def edit_trade(trade_id):
+    if request.method == "POST":
+        is_negotiable = "on" if request.form.get("is_negotiable") else "off"
+        submit = {
+            "console_name": request.form.get("console_name"),
+            "game_name": request.form.get("game_name"),
+            "trade_desc": request.form.get("trade_desc"),
+            "is_negotiable": is_negotiable,
+            "gamer_tag": request.form.get("gamer_tag"),
+            "created_by": session["user"]
+        }
+        mongo.db.trades.update({"_id": ObjectId(trade_id)}, submit)
+        flash("Trade Successfully Updated")
+
     trade = mongo.db.trades.find_one({"_id": ObjectId(trade_id)})
     console_type = mongo.db.console_type.find().sort("console_name", 1)
-    return render_template("edit_trade.html", trade=trade, console_type=console_type)
+    return render_template(
+        "edit_trade.html", trade=trade, console_type=console_type)
 
 
 if __name__ == "__main__":
