@@ -10,21 +10,26 @@
         <label for="game_name" class="col-sm-2 col-form-label"><i class="fas fa-gamepad"></i> Game Title</label>
             <div class="col-sm-12">
                 <input type="text" name="game_name" minlength="5" maxlength="15" class="form-control" id="game_name"
-                    placeholder="Game Title" required >
+                    placeholder="Game Title" value="{{ trade.game_name }}" required >
             </div>
     </div>
     <!-- Trade Description -->
     <div class="form-group row">
         <label class="col-sm-2 col-form-label" for="trade_desc"><i class="far fa-edit"></i> Trade Discription</label>
         <div class="col-sm-12">
-        <textarea class="form-control" name="trade_desc" id="trade_desc" minlength="5" maxlength="200" rows="3" required></textarea>
+        <textarea class="form-control" name="trade_desc" id="trade_desc" minlength="5" maxlength="200" rows="3" required>
+            {{- trade.trade_desc -}}
+        </textarea>
         </div>
     </div>
 <!-- A switch for (if the trade will be negotable)-->
     <div class="form-group">
         <div class="custom-control custom-switch">
-            
-            <input type="checkbox" class="custom-control-input" name="is_negotiable" id="is_negotiable">
+            {% if trade.is_negotiable == "on" %}
+                <input type="checkbox" class="custom-control-input" name="is_negotiable" id="is_negotiable" checked>
+            {% else %}
+                <input type="checkbox" class="custom-control-input" name="is_negotiable" id="is_negotiable">
+            {% endif %}
             <label class="custom-control-label" for="is_negotiable">Negotiable <i class="fas fa-exclamation-circle"></i></label>
           </div>
     </div>
@@ -35,9 +40,13 @@
             title="Make sure you pick the correct platform in which the item residess"></i> Gaming Console</label>
         <div class="col-sm-12">
             <select class="custom-select" name="console_name" id="console_name" required>
-                <option selected>Choose a console</option>
+                <option>Choose a console</option>
                 {% for console in console_type %}
-                <option value="{{ console.console_name }}">{{ console.console_name }}</option>
+                    {% if console.console_name == trade.console_name%}
+                        <option value="{{ console.console_name }}" selected>{{ console.console_name }}</option>
+                    {% else %}
+                        <option value="{{ console.console_name }}">{{ console.console_name }}</option>
+                    {% endif %}
                 {% endfor %}
             </select>
         </div>
@@ -47,11 +56,14 @@
         <label class="col-sm-2 col-form-label" for="gamer_tag">Contact Seller <i class="fas fa-user-friends" data-toggle="tooltip" data-placement="right"
             title="What is the best way for the buyer to contact you?"></i></label>
         <div class="col-sm-12">
-        <textarea class="form-control" name="gamer_tag" id="gamer_tag" minlength="5" maxlength="200" rows="3" required></textarea>
+        <textarea class="form-control" name="gamer_tag" id="gamer_tag" minlength="5" maxlength="200" rows="3" required>
+            {{- trade.gamer_tag -}}
+        </textarea>
         </div>
     </div>
     <div class="form-group row text-center">
         <div class="col-sm-12 ">
+            <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-danger">Cancel <i class="fas fa-times-circle right"></i></button></a>
             <button type="submit" class="btn btn-primary">Edit Trade <i class="fas fa-wrench"></i></button>
         </div>
     </div>
