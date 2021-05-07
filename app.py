@@ -149,6 +149,12 @@ def delete_trade(trade_id):
     return redirect(url_for("get_trades"))
 
 
+@app.route("/get_consoles")
+def get_consoles():
+    console_type = list(mongo.db.console_type.find().sort("console_name", 1))
+    return render_template("consoles.html", console_type=console_type)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="row d-flex justify-content-center center-text" id="page-title">Edit a Console</h3>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        {% for console in console_type %}
+        <div class="col-sm-4 mb-3">
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title">{{ console.console_name }}</h5>
+                <button type="button" class="btn btn-danger">Delete Console <i class="fas fa-times-circle right"></i></button></a>
+                <button type="submit" class="btn btn-primary">Edit Console <i class="fas fa-wrench"></i></button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

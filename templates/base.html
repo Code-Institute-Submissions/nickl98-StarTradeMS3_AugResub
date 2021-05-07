@@ -24,11 +24,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{ url_for('get_trades') }}">Home</a>
+                  <a class="nav-link" href="{{ url_for('get_trades') }}">Active Trades</a>
                 </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
-                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
                   </li>
@@ -40,8 +37,11 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a href="{{ url_for('profile', username=session['user']) }}" class="dropdown-item">Profile</a>
                       <a class="dropdown-item" href="{{ url_for('add_trade') }}">New Trade</a>
-                      <a class="dropdown-item" href="#">Manage Trades</a>
-                      <a class="dropdown-item" href="{{ url_for('logout') }}">Log Out</a>
+                      {% if session.user|lower == "admin"|lower %}
+                        <a class="dropdown-item" href="{{ url_for('get_consoles') }}">Manage Console</a>
+                      {% endif %}
+                        <a class="dropdown-item" href="{{ url_for('login') }}">Log In</a>
+                        <a class="dropdown-item" href="{{ url_for('logout') }}">Log Out</a>
                     </div>
                   </li>
                   {% else %}
