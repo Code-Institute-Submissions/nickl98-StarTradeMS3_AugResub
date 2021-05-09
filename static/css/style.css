@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+/* Navbar Links */
 .navbar-dark .navbar-nav .nav-link {
-    /**Nav elements/ color etc*/
+   
+    font-family: 'Krona One', sans-serif;
+    font-size: 10px;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-family: 'Krona One', sans-serif;
+    font-size: 20px;
 }
 
 .dropdown-menu {
     background-color: gray;
+    font-family: 'Krona One', sans-serif;
+    font-size: 15px;
 }
 
 .dropdown-item {
@@ -61,6 +74,7 @@ body {
 #page-title {
     font-weight: 600;
     font-size: 45px;
+    font-family: 'Krona One', sans-serif;
 }
 
 /* Date Picker Css */
@@ -82,3 +96,6 @@ body {
     padding-bottom: 5px;
     margin: 5px;
 }
+
+
+/* Text Decorations */

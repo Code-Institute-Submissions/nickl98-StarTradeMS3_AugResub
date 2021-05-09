@@ -155,6 +155,11 @@ def get_consoles():
     return render_template("consoles.html", console_type=console_type)
 
 
+@app.route("/add_console", methods=["GET", "POST"])
+def add_console():
+    return render_template("add_console.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
