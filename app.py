@@ -157,6 +157,14 @@ def get_consoles():
 
 @app.route("/add_console", methods=["GET", "POST"])
 def add_console():
+    if request.method == "POST":
+        console = {
+            "console_name": request.form.get("console_name")
+        }
+        mongo.db.console_type.insert_one(console)
+        flash("New Console was Added")
+        return redirect(url_for("get_consoles"))
+
     return render_template("add_console.html")
 
 
