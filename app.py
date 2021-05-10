@@ -27,6 +27,13 @@ def get_trades():
     return render_template("trades.html", trades=trades)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    trades = list(mongo.db.trades.find({"$text": {"$search": query}}))
+    return render_template("trades.html", trades=trades)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

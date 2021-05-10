@@ -3,6 +3,25 @@
 
 <h3 class="row d-flex justify-content-center center-text" id="page-title">All Current Trades</h3>
 
+<div class="row d-flex justify-content-center center-text">
+    <div class="card col-lg-9 mx-auto">
+        <form action="{{ url_for('search') }}" method="post">
+        <div class="input-group col-lg-9">
+            <div class="form-outline">
+              <input type="text" id="query" name="query" minlength="3" class="form-control" required />
+              <label class="form-label" for="query">Search Trades</label>
+            
+            <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-danger text-center">Reset</button></a>
+            <button type="submit" class="btn btn-primary">
+              Search<i class="fas fa-search"></i>
+            </button>
+            </div>
+          </div>
+        </form> 
+    </div>
+</div>
+
+    
 <div class="row">
     <div class="col-lg-9 mx-auto">
         <!-- Accordion -->
@@ -41,6 +60,6 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </div>   
 </div>
 {% endblock %}
