@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="row d-flex justify-content-center center-text" id="page-title">Edit Trade type</h3>
+
+<div class="row card" id="back-card">
+<form class="col-sm-12" method="POST" action="{{ url_for('edit_console', console_type_id=console_type._id) }}">
+    <!-- Console Name -->
+    <div class="form-group row ">
+        <label for="console_name" class="col-sm-2 col-form-label"><i class="fas fa-globe"></i> Add new Console</label>
+            <div class="col-sm-12">
+                <input type="text" name="console_name" value="{{ console_type.console_name }}" minlength="3" maxlength="25" class="form-control" id="console_name"
+                    placeholder="Game Title" required >
+            </div>
+    </div>
+    <!-- Submmit Button -->
+    <div class="form-group row text-center">
+        <div class="col-sm-12 ">
+            <button type="submit" class="btn btn-primary">Edit Trade Type <i class="fas fa-edit"></i></button>
+        </div>
+    </div>
+</form>
+</div>
+
+{% endblock %}

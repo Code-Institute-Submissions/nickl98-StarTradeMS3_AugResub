@@ -168,6 +168,12 @@ def add_console():
     return render_template("add_console.html")
 
 
+@app.route("edit_console/<console_type_id>", methods=["GET", "POST"])
+def edit_console(console_type_id):
+    console_name = mongo.db.console_type = 
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
