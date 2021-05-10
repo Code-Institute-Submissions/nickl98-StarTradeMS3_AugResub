@@ -168,10 +168,11 @@ def add_console():
     return render_template("add_console.html")
 
 
-@app.route("edit_console/<console_type_id>", methods=["GET", "POST"])
-def edit_console(console_type_id):
-    console_name = mongo.db.console_type = 
-
+@app.route("/delete_console/<console_id>")
+def delete_console(console_id):
+    mongo.db.console_type.remove({"_id": ObjectId(console_id)})
+    flash("Trade Type Succesfully Deleted!")
+    return redirect(url_for("get_consoles"))
 
 
 if __name__ == "__main__":
