@@ -22,15 +22,17 @@
               </div>
               <button type="submit" class="btn btn-primary">Sign Up</button>
         </div>
+        <div class="row justify-content-md-center">
+            <p class="center-text">
+                Already Signed up?
+                <a href="{{ url_for('login') }}" class="center-text">Log In Here</a>
+            </p>
+    </div>
+        </div>
     </form>
 </div>
 </div>
 
-<div class="row justify-content-md-center">
-        <p class="center-text">
-            Already Signed up?
-            <a href="{{ url_for('login') }}" class="center-text">Log In Here</a>
-        </p>
-</div>
+
 
 {% endblock %}

@@ -1,17 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container">
-    <div class="row justify-content-md-center">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="center-text" id="profile-text">
-                    {{ username }}'s Profile
-                </h3>
-            </div>
-        </div>
-    </div>
-</div>
+
+<div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4 text-center">Hello, {{ username }} </h1>
+    <p class="lead text-center">Nice to see you again!</p>
+    <hr class="my-4">
+    <p class="text-center">Here are the list of the trades you listed.
+    <br><i>Don't forget to mark items as sold when trade goes through</i></p>
+  </div>
+
 
 <div class="row">
     <div class="col-lg-9 mx-auto">

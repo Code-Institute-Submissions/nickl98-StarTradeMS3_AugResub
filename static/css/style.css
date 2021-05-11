@@ -3,24 +3,28 @@
 /* Navbar Links */
 .navbar-dark .navbar-nav .nav-link {
    
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 10px;
 }
 
 /* Navbar Brand */
 .navbar-brand {
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Roboto Slab', serif;;
     font-size: 20px;
 }
 
 .dropdown-menu {
     background-color: gray;
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 15px;
 }
 
 .dropdown-item {
     color: white;
+}
+
+#navbarDropdownMenuLink {
+    margin: auto;
 }
 
 
@@ -76,29 +80,20 @@ body {background: #757F9A;  /* fallback for old browsers */
 #page-title {
     font-weight: 600;
     font-size: 45px;
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 label {
-    color: white;
-    font-size: 10px;
-    font-family: 'Krona One', sans-serif;
+    color: black;
+    font-size: 13px;
+    font-family: 'Roboto Slab', serif;
 }
 
 
-#collapseOne {
-    font-size: 10px;
-    font-family: 'Krona One', sans-serif;
-}
-/* Date Picker Css */
-.datepicker td, .datepicker th {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 0.85rem;
-}
+/* Jumbotron Css */
 
-.datepicker {
-    margin-bottom: 3rem;
+#bottom-jumbo {
+    margin-top: 25px;
 }
 
 
