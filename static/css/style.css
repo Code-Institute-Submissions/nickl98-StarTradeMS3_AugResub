@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 /* Navbar Links */
 .navbar-dark .navbar-nav .nav-link {
@@ -58,17 +58,19 @@
     content: '\f106';
 }
 
-body {
-    background: #654ea3;
-    background: -webkit-linear-gradient(to left, #654ea3, #eaafc8);
-    background: linear-gradient(to left, #654ea3, #eaafc8);
-    min-height: 100vh;
+body {background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
 }
 
+
+
 #back-card {
-    background: #654ea3;
-    background: -webkit-linear-gradient(to left, #eaafc8, #654ea3);
-    background: linear-gradient(to left,  #eaafc8, #654ea3);
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #page-title {
@@ -77,6 +79,17 @@ body {
     font-family: 'Krona One', sans-serif;
 }
 
+label {
+    color: white;
+    font-size: 10px;
+    font-family: 'Krona One', sans-serif;
+}
+
+
+#collapseOne {
+    font-size: 10px;
+    font-family: 'Krona One', sans-serif;
+}
 /* Date Picker Css */
 .datepicker td, .datepicker th {
     width: 2.5rem;

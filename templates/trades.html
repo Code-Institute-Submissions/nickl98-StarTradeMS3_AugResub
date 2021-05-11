@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="jumbotron">
+<div class="jumbotron jumbotron-fluid">
     <h1 class="display-4">Hello, world!</h1>
     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
     <hr class="my-4">
@@ -15,7 +15,7 @@
 <div class="row d-flex justify-content-center center-text">
     <div class="card col-lg-9 mx-auto">
         <form action="{{ url_for('search') }}" method="post">
-        <div class="input-group col-lg-9">
+        <div class="input-group col-lg-9 mx-auto">
             <div class="form-outline">
               <input type="text" id="query" name="query" minlength="3" class="form-control" required />
               <label class="form-label" for="query">Search Trades</label>
@@ -71,4 +71,11 @@
         </div>
     </div>   
 </div>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
 {% endblock %}
