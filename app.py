@@ -122,7 +122,7 @@ def profile(username):
     a user inputs username and password, also grabs the session
     Id
     2. The POST method then takes the session ID from username
-    and then prints all the trades in assoication with with the 
+    and then prints all the trades in assoication with with the
     usernmae
     """
     trades = list(mongo.db.trades.find({"created_by": session["user"]}))
@@ -131,7 +131,7 @@ def profile(username):
 
     if session["user"]:
         return render_template("profile.html", username=username,
-            trades=trades)
+        trades=trades)
 
     return redirect(url_for("login"))
 
