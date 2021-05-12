@@ -243,7 +243,7 @@ def delete_console(console_id):
     implemented in the database
     """
     mongo.db.console_type.remove({"_id": ObjectId(console_id)})
-    flash("Trade Type Succesfully Deleted!")
+    flash("Trade Category Succesfully Deleted!")
     return redirect(url_for("get_consoles"))
 
 
