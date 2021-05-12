@@ -29,8 +29,8 @@
               <input type="text" id="query" name="query" minlength="3" class="form-control text-center mb-0" required />
              
             
-            <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-danger text-center">Reset</button></a>
-            <button type="submit" class="btn btn-primary">
+            <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-secondary text-center">Reset</button></a>
+            <button type="submit" class="btn btn-secondary">
               Search<i class="fas fa-search"></i>
             </button>
             </div>
@@ -82,9 +82,8 @@
 </div>
 </div>
 <div class="jumbotron jumbotron-fluid" id="bottom-jumbo">
-    <div class="container">
-      <h1 class="display-4">Fluid jumbotron</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-    </div>
+    <p class="lead text-center"><strong>StarTrade is not reposible for scams!</strong></p>
+    <hr class="my-4">
+    <p class="text-center"><i>Remember to be safe and dont give out your bank information!</i></p>
   </div>
 {% endblock %}
