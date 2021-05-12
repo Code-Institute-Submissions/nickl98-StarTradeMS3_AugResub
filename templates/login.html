@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="row justify-content-md-center" id="page-title">Log In</h3>
+<h3 class="row justify-content-center" id="page-title">Log In</h3>
 
 <div class="container">
-<div class="row justify-content-md-center">
+<div class="row justify-content-center">
     <form class="card" method="POST" action="{{ url_for('login') }}">
         <div class="card-body">
         <div class="row justify-content-md-center">
@@ -20,12 +20,12 @@
                 <input type="password" name="password" class="form-control" minlength="5"
                 maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" id="password" required>
               </div>
-              <button type="submit" class="btn btn-primary">Log In</button>
+              <button type="submit" class="btn btn-primary text-center">Log In</button>
             </div>
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-center">
                 <p class="center-text">
                    New here? Sign up here
-                    <a href="{{ url_for('register') }}" class="center-text">Log In Here</a>
+                    <a href="{{ url_for('register') }}" class="center-text">Sign up here</a>
                 </p>
         </div>
         </div>

@@ -2,23 +2,23 @@
 {% block content %}
 
 <div class="jumbotron jumbotron-fluid">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <h1 class="display-4 text-center">Welcome to StarTrade <i class="fas fa-star-half-alt"></i></h1>
+    <p class="lead text-center">Find the Trades here!</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+    <p class="text-center">Here is a list of all the curent listings currently up for trade!
+    <br><i>We even support trading card listings!</i></p>
   </div>
-<h3 class="row d-flex justify-content-center center-text" id="page-title">All Current Trades</h3>
 
-<div class="row d-flex justify-content-center center-text">
-    <div class="card col-lg-9 mx-auto">
+<h3 class="row d-flex justify-content-center" id="page-title">All Current Trades</h3>
+
+<div class="row d-flex col-lg-9 mx-auto">
+    <div class="card col-12">
         <form action="{{ url_for('search') }}" method="post">
-        <div class="input-group col-lg-9 mx-auto">
-            <div class="form-outline">
-              <input type="text" id="query" name="query" minlength="3" class="form-control" required />
-              <label class="form-label" for="query">Search Trades</label>
+        <div class="input-group col-12">
+            <div class="form-outline col-lg-9 mx-auto">
+            <label class="form-label" for="query">Search Trades</label>
+              <input type="text" id="query" name="query" minlength="3" class="form-control text-center mb-0" required />
+             
             
             <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-danger text-center">Reset</button></a>
             <button type="submit" class="btn btn-primary">

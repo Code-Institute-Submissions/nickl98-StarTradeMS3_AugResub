@@ -28,6 +28,7 @@
                 </li>
                 
                 {% if session.user %}
+                
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Trade 
@@ -35,20 +36,22 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a href="{{ url_for('profile', username=session['user']) }}" class="dropdown-item">Profile</a>
                     <a class="dropdown-item" href="{{ url_for('add_trade') }}">New Trade</a>
-                    {% if session.user|lower == "admin"|lower %}
-                      <a class="dropdown-item" href="{{ url_for('get_consoles') }}">Manage Console</a>
-                    {% endif %}
+                    
                       <a class="dropdown-item" href="{{ url_for('logout') }}">Log Out</a>
                   </div>
                 </li>
+                {% if session.user|lower == "admin"|lower %}
+                <a class="nav-link" href="{{ url_for('get_consoles') }}">Manage Console</a>
+              {% endif %}
                 {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
+                </li>
                 {% endif %}
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
-                  </li>
+                  
               </ul>
             </div>
           </nav>
