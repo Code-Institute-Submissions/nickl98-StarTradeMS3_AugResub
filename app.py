@@ -235,7 +235,7 @@ def add_console():
     return render_template("add_console.html")
 
 
-@app.route("/delete_console/<console_id>")
+@app.route("/delete_console/<console_id>") 
 def delete_console(console_id):
     """ At the delete_console function
     The admins can easily delete console names for whatever reason.
