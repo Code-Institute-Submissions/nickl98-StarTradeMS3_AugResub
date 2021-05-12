@@ -4,7 +4,7 @@
 .navbar-dark .navbar-nav .nav-link {
    
     font-family: 'Roboto Slab', serif;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 /* Navbar Brand */
@@ -24,7 +24,7 @@
 }
 
 #navbarDropdownMenuLink {
-    margin: auto;
+    margin-right: 15px;
 }
 
 
@@ -38,6 +38,27 @@
     color: cadetblue;
     font-size: 30px;
 }
+
+/* Search Bar */
+#search-bar {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 15px;
+}
+
+#search-bar label {
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+}
+
+#search-bar-background {
+    background-color: #b3b3b3
+}
+ /* console Icons */
+
+ #console-icons p {
+     font-size: 50px;
+ }
 
 /**Accordian Style**/
 
