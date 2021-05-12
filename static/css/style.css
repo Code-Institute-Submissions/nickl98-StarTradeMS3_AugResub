@@ -39,6 +39,9 @@
     font-size: 30px;
 }
 
+
+
+
 /* Search Bar */
 #search-bar {
     margin-left: 2px;
@@ -52,7 +55,7 @@
 }
 
 #search-bar-background {
-    background-color: #b3b3b3
+    background-color: #C0C0C0
 }
  /* console Icons */
 
@@ -91,9 +94,9 @@ body {background: #757F9A;  /* fallback for old browsers */
 }
 
 
-
+/* card styling */
 #back-card {
-    background: #bdc3c7;
+    background: #C0C0C0;
 }
 
 #page-title {
@@ -108,6 +111,17 @@ label {
     font-family: 'Roboto Slab', serif;
 }
 
+#trade-background {
+    background-color:#fafafa;
+}
+
+#card-content {
+    background-color: #fafafa;
+}
+
+.accordionExample {
+    background-color: red;
+}
 
 /* Jumbotron Css */
 

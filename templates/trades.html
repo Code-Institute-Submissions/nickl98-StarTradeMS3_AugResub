@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid" id="card-content">
     <h1 class="display-3 text-center">Welcome to StarTrade <i class="fas fa-star-half-alt"></i></h1>
     <p class="lead text-center">Find the Best Trades here!</p>
     <hr class="my-4">
@@ -10,15 +10,15 @@
   </div>
 
 
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid" id="card-content">
     <h2 class="display-5 text-center">Find Trades From The Most Popular Consoles!</h2>
     <hr class="my-4">
     <p class="text-center">Below you can find trades on popular Gaming Networks!</p>
     <p class="text-center" id="console-icons"><strong><i class="fab fa-xbox"></i> <i class="fab fa-playstation"></i> <i class="fab fa-steam"></i> <i class="fab fa-internet-explorer"></i></strong></p>
   </div>
 
-<div class="card">  
-<h3 class="row d-flex justify-content-center" id="page-title">All Current Trades</h3>
+<div class="card" id="trade-background">  
+<h3 class="row d-flex justify-content-center" id="page-title">Current Trades</h3>
 
 <div class="row"  id="search-bar">
     <div class="card col-12 mx-auto"  id="search-bar-background">
