@@ -2,10 +2,9 @@
 
 <div class="jumbotron jumbotron-fluid" id="card-content">
     <h1 class="display-3 text-center">Welcome to StarTrade <i class="fas fa-star-half-alt"></i></h1>
-    <p class="lead text-center">Find the Best Trades here!</p>
+    <p class="lead text-center">Find the Best Trades with StarTrade here!</p>
     <hr class="my-4" />
     <p class="text-center">
-        Here is a list of all the curent listings currently up for trade! <br />
         <i>We even support trading card listings!</i>
     </p>
 </div>
@@ -48,7 +47,7 @@
                     <div id="headingOne" class="card-header bg-white shadow-sm border-0">
                         <h2 class="mb-0">
                             <button type="button" data-toggle="collapse" data-target="#collapseOne-{{loop.index}}" aria-expanded="true" aria-controls="collapseOne" class="btn btn-link text-dark font-weight-bold text-uppercase">
-                                Game : {{ trade.game_name }} <i class="fas fa-caret-down"></i>
+                              Trade :   {{ trade.game_name }} <i class="fas fa-caret-down"></i>
                             </button>
                             {% if trade.is_negotiable == "on" %}
                             <i class="fas fa-exclamation-circle" data-toggle="tooltip" data-placement="right" title="Trade is negotiable by seller!"></i>
@@ -79,7 +78,7 @@
     </div>
 </div>
 <div class="jumbotron jumbotron-fluid" id="bottom-jumbo">
-    <p class="lead text-center"><strong>StarTrade is not reposible for scams!</strong></p>
+    <p class="lead text-center"><strong>StarTrade is not responsible for scams!</strong></p>
     <hr class="my-4" />
     <p class="text-center"><i>Remember to be safe and dont give out your bank information!</i></p>
 </div>

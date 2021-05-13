@@ -13,7 +13,7 @@
     <form class="col-sm-12" method="POST" action="{{ url_for('add_trade') }}">
         <!-- Game Title -->
         <div class="form-group row">
-            <label for="game_name" class="col-sm-2 col-form-label"><i class="fas fa-gamepad"></i> Game Title</label>
+            <label for="game_name" class="col-sm-2 col-form-label"><i class="fas fa-gamepad"></i> Trade Title</label>
             <div class="col-sm-12">
                 <input type="text" name="game_name" minlength="5" maxlength="15" class="form-control" id="game_name" placeholder="Game Title" required />
             </div>
@@ -36,7 +36,7 @@
         <!-- Console selction -->
         <div class="form-group row">
             <label for="console_name" class="col-sm-2 col-form-label">
-                <i class="fas fa-globe" data-toggle="tooltip" data-placement="right" title="Make sure you pick the correct platform in which the item residess"></i> Gaming Console
+                <i class="fas fa-globe" data-toggle="tooltip" data-placement="right" title="Make sure you pick the correct platform in which the item residess"></i> Trading Platform
             </label>
             <div class="col-sm-12">
                 <select class="custom-select" name="console_name" id="console_name" required>
@@ -49,7 +49,7 @@
         </div>
         <!-- Platform GamerTag / or contact infromation for trading card deals -->
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="gamer_tag">Contact Seller <i class="fas fa-user-friends" data-toggle="tooltip" data-placement="right" title="What is the best way for the buyer to contact you?"></i></label>
+            <label class="col-sm-2 col-form-label" for="gamer_tag"> <i class="fas fa-user-friends" data-toggle="tooltip" data-placement="right" title="What is the best way for the buyer to contact you?"></i> Contact Seller </label>
             <div class="col-sm-12">
                 <textarea class="form-control" name="gamer_tag" id="gamer_tag" minlength="5" maxlength="200" rows="3" required></textarea>
             </div>
