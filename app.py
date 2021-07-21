@@ -77,40 +77,48 @@ def register():
     return render_template("register.html")
 
 
-@app.route("/login", methods=["GET", "POST"])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     """This is the Login function
     The Login method has two methods,
     1. The GET method gets the infromation from the input when
     a user inputs username and password
-    2. The POST method checks with the database to see if 
+    2. The POST method checks with the database to see if
     the username exists
     """
-    if request.method == "POST":
+
+    if request.method == 'POST':
+
         # check if username exists in db
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+
+        existing_user = \
+            mongo.db.users.find_one(
+                {'username': request.form.get('username').lower()})
 
         if existing_user:
+
             # ensure hashed password matches user input
-            if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("username")))
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+
+            if check_password_hash(existing_user['password'],
+                                   request.form.get('password')):
+                session['user'] = request.form.get('username').lower()
+                flash('Welcome, {}'.format(request.form.get('username')))
+                return redirect(url_for('profile',
+                                username=session['user']))
             else:
+
                 # invalid password match
-                flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
 
+                flash('Incorrect Username and/or Password')
+                return redirect(url_for('login'))
         else:
-            # username doesn't exist
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
 
-    return render_template("login.html")
+            # username doesn't exist
+
+            flash('Incorrect Username and/or Password')
+            return redirect(url_for('login'))
+
+    return render_template('login.html')
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -130,8 +138,8 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username,
-        trades=trades)
+        return render_template(
+            "profile.html", username=username, trades=trades)
 
     return redirect(url_for("login"))
 
@@ -174,7 +182,7 @@ def add_trade():
 @app.route("/edit_trade/<trade_id>", methods=["GET", "POST"])
 def edit_trade(trade_id):
     """ This is where the user is able to make any chnages to the trade
-    It uses a Get and Post method as well, in addition to using the 
+    It uses a Get and Post method as well, in addition to using the
     trade-id.
     The Get method passes along the Trade_id thats unique to the trade
     Then with the Post method just like the add_trade it adds it
@@ -235,11 +243,11 @@ def add_console():
     return render_template("add_console.html")
 
 
-@app.route("/delete_console/<console_id>") 
+@app.route("/delete_console/<console_id>")
 def delete_console(console_id):
     """ At the delete_console function
     The admins can easily delete console names for whatever reason.
-    It uses the uniuqe variable console_id to make sure it gets 
+    It uses the uniuqe variable console_id to make sure it gets
     implemented in the database
     """
     mongo.db.console_type.remove({"_id": ObjectId(console_id)})
