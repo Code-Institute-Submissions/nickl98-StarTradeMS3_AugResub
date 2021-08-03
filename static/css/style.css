@@ -6,6 +6,9 @@
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
 }
+.navbar-light {
+    background-color: rgba(255,255,255,0.5)
+}
 
 /* Navbar Brand */
 .navbar-brand {
@@ -14,13 +17,18 @@
 }
 
 .dropdown-menu {
-    background-color: gray;
+    background-color: red;
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
+    z-index: 1000;
 }
 
 .dropdown-item {
     color: white;
+}
+
+.bg-back {
+    background-color: #42629a;
 }
 
 #navbarDropdownMenuLink {
