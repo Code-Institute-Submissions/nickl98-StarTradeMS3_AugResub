@@ -129,8 +129,8 @@ label {
     background-color:#fafafa;
 }
 
-#card-content {
-    background-color: #fafafa;
+.card-content {
+    background-color: red;
 }
 
 .accordionExample {
