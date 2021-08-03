@@ -255,7 +255,19 @@ def delete_console(console_id):
     return redirect(url_for("get_consoles"))
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
+
+
+def create_app(config_filename):
+    app = Flask(__name__)
+    app.register_error_handler(404, page_not_found)
+    return app
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
