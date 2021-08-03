@@ -272,13 +272,18 @@ label {
 }
 
 #trade-background {
-    background-color:#fafafa;
+    background-color: rgba(255,255,255,0.5)
 }
 
 .card-content {
     background-color: gray;
+    
 }
 
+#bottom-card {
+    padding-bottom: 150px;
+
+}
 .accordionExample {
     background-color: red;
 }
