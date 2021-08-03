@@ -197,11 +197,16 @@ footer a {
 }
 /*SOCİAL İCONS*/
 /* footer social icons */
+.li {
+    align-items: center;
+}
+
 ul.social-network {
     list-style: none;
     display: inline;
     margin-left: 0 !important;
     padding: 0;
+    align-items: center;
 }
 ul.social-network li {
     display: inline;
