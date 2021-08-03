@@ -71,7 +71,8 @@ html,body
 }
 
 #search-bar-background {
-    background-color: rgba(255,255,255,0.5)
+    background-color: rgba(255,255,255,0.8)
+
 
 }
  /* console Icons */
@@ -82,6 +83,9 @@ html,body
 
 /**Accordian Style**/
 
+.accordion {
+    padding-bottom: 150px;
+}
 .collapsible-link {
     width: 100%;
     position: relative;
@@ -260,7 +264,7 @@ ul.social-network li {
     background: #C0C0C0;
 }
 
-#page-title {
+.page-title {
     font-weight: 600;
     font-size: 45px;
     font-family: 'Roboto Slab', serif;
@@ -277,23 +281,14 @@ label {
 }
 
 .card-content {
-    background-color: gray;
+    background-color: rgba(255,255,255,0.8)
+
     
 }
 
 #bottom-card {
     padding-bottom: 150px;
 
-}
-.accordionExample {
-    margin-bottom: 15px;
-}
-
-/* Jumbotron Css */
-
-#bottom-jumbo {
-    margin-top: 25px;
-    background-color: #fafafa;
 }
 
 
