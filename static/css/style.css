@@ -344,3 +344,15 @@ label {
         display: none;
    }
 }
+
+@media only screen and (max-width : 1024px) {
+    footer{
+        visibility: hidden;
+        display: none;
+   }
+
+   .accordion {
+       padding-bottom: 5px;
+       margin-bottom: 10px;
+   }
+}
