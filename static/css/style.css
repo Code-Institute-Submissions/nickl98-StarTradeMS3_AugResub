@@ -51,9 +51,9 @@ html,body
 
 }
 
-#trading-background {
-    background-color: rgba(255,255,255,0.5);
-
+.card .trading-background {
+    background-color: rgba(255,255,255,0.8);
+    
 }
 
 .bg-back {
@@ -111,7 +111,7 @@ html,body
 
 .accordion {
     padding-bottom: 155px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.8);
 
 }
 .collapsible-link {
@@ -202,16 +202,12 @@ footer a {
 }
 /*SOCİAL İCONS*/
 /* footer social icons */
-.li {
-    align-items: center;
-}
 
 ul.social-network {
     list-style: none;
     display: inline;
     margin-left: 0 !important;
     padding: 0;
-    align-items: center;
 }
 ul.social-network li {
     display: inline;
@@ -265,6 +261,7 @@ ul.social-network li {
     margin: 0;
     line-height: 30px;
     text-align: center;
+    align-items: center;
 }
 .social-circle li a:hover i, .triggeredHover {
     -moz-transform: rotate(360deg);
@@ -284,9 +281,17 @@ ul.social-network li {
     -o-transition: all 0.8s;
     -ms-transition: all 0.8s;
     transition: all 0.8s;
+    align-items: center;
 }
 .social-network a {
     background-color: #F9F9F9;
+}
+
+.icon-row {
+    float: none;
+     margin: 0 auto;
+     padding-left: 250px;
+     padding-right: 100px;
 }
 
 /* card styling */
