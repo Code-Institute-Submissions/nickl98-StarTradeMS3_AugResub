@@ -18,8 +18,9 @@ html,body
 .navbar-nav {
     padding-right: 10px;
 }
-.navbar-light {
-    background-color: rgba(255,255,255,0.5);
+
+.nav-link {
+    color: white
 }
 
 /* Navbar Brand */
@@ -27,6 +28,15 @@ html,body
     font-family: 'Roboto Slab', serif;;
     font-size: 20px;
     padding-left: 10px;
+    color: white;
+}
+
+.a .navbar-brand #text{
+    color: white;
+}
+
+.navbar-toggler {
+    color: white;
 }
 
 .dropdown-menu {
@@ -37,7 +47,8 @@ html,body
 }
 
 .dropdown-item {
-    color: white;
+    background-color: rgba(255,255,255,0.5);
+
 }
 
 .bg-back {
@@ -95,6 +106,8 @@ html,body
 
 .accordion {
     padding-bottom: 150px;
+    background-color: rgba(255,255,255,0.5);
+
 }
 .collapsible-link {
     width: 100%;
@@ -172,10 +185,7 @@ footer a {
     font-size: 14px;
     transition-duration: 0.2s;
 }
-footer a:hover {
-    color: #FA944B;
-    text-decoration: none;
-}
+
 .copy {
     font-size: 12px;
     padding: 10px;
@@ -279,7 +289,7 @@ ul.social-network li {
     font-size: 45px;
     font-family: 'Roboto Slab', serif;
 }
-
+ 
 label {
     color: black;
     font-size: 13px;
