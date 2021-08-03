@@ -71,7 +71,8 @@ html,body
 }
 
 #search-bar-background {
-    background-color: #C0C0C0
+    background-color: rgba(255,255,255,0.5)
+
 }
  /* console Icons */
 
@@ -285,7 +286,7 @@ label {
 
 }
 .accordionExample {
-    background-color: red;
+    margin-bottom: 15px;
 }
 
 /* Jumbotron Css */
