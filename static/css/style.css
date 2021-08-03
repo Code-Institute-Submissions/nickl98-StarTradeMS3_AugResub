@@ -51,6 +51,11 @@ html,body
 
 }
 
+#trading-background {
+    background-color: rgba(255,255,255,0.5);
+
+}
+
 .bg-back {
     background-color: #42629a;
 }
@@ -105,7 +110,7 @@ html,body
 /**Accordian Style**/
 
 .accordion {
-    padding-bottom: 150px;
+    padding-bottom: 155px;
     background-color: rgba(255,255,255,0.5);
 
 }

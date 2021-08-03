@@ -32,7 +32,7 @@
                         <input type="text" id="query" name="query" minlength="3" class="form-control text-center mb-0" required />
 
                         <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-secondary text-center">Reset</button></a>
-                        <button type="submit" class="btn btn-secondary">Search<i class="fas fa-search"></i></button>
+                        <button type="submit" class="btn btn-secondary">Search <i class="fas fa-search"></i></button>
                     </div>
                 </div>
             </form>
@@ -45,8 +45,8 @@
             <div id="accordionExample" class="accordion shadow">
                 {% for trade in trades %}
                 <!-- Accordion item 1 -->
-                <div class="card">
-                    <div id="headingOne" class="card-header bg-white shadow-sm border-0">
+                <div id="trading-background" class="card">
+                    <div class="card-header shadow-sm border-0">
                         <h2 class="mb-0">
                             <button type="button" data-toggle="collapse" data-target="#collapseOne-{{loop.index}}" aria-expanded="true" aria-controls="collapseOne" class="btn btn-link text-dark font-weight-bold text-uppercase">
                               Trade :   {{ trade.game_name }} <i class="fas fa-caret-down"></i>
