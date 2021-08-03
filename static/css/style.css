@@ -12,20 +12,25 @@ html,body
 .navbar-dark .navbar-nav .nav-link {
    
     font-family: 'Roboto Slab', serif;
-    font-size: 15px;
+    font-size: 15px;   
+}
+
+.navbar-nav {
+    padding-right: 10px;
 }
 .navbar-light {
-    background-color: rgba(255,255,255,0.5)
+    background-color: rgba(255,255,255,0.5);
 }
 
 /* Navbar Brand */
 .navbar-brand {
     font-family: 'Roboto Slab', serif;;
     font-size: 20px;
+    padding-left: 10px;
 }
 
 .dropdown-menu {
-    background-color: red;
+    background-color: gray;
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
     z-index: 1000;
@@ -72,9 +77,14 @@ html,body
 
 #search-bar-background {
     background-color: rgba(255,255,255,0.8)
-
-
 }
+/* Hidden background */
+
+.hidden-bg {
+    background-color: rgba(255,255,255,0.5);
+    
+}
+
  /* console Icons */
 
  #console-icons p {
@@ -277,13 +287,12 @@ label {
 }
 
 #trade-background {
-    background-color: rgba(255,255,255,0.5)
+    background-color: rgba(255,255,255,0.5);
 }
 
 .card-content {
-    background-color: rgba(255,255,255,0.8)
-
-    
+    background-color: rgba(255,255,255,0.8);
+    overflow-x: hidden;
 }
 
 #bottom-card {
