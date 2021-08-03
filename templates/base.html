@@ -42,8 +42,11 @@
         {% endblock %}
         {% block postloadjs %}
         <script>
-            $('.collapse').collapse();
-            $('.tooltip').tooltip();
+           $(document).ready(function(){
+               $('.collapse').collapse();
+               $('.tooltip').tooltip();
+            })
+            
         </script>
         {% endblock %}
         <footer class="mainfooter static">
