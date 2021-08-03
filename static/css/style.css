@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
+
+/* Borders */
+
 /* Navbar Links */
+
+
 html,body
 {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    border-radius: 0 !important;
+    
 }
 .navbar-dark .navbar-nav .nav-link {
    
@@ -53,6 +60,7 @@ html,body
 
 .card .trading-background {
     background-color: rgba(255,255,255,0.8);
+    border: none !important;
     
 }
 
@@ -313,6 +321,9 @@ label {
 
 #trade-background {
     background-color: rgba(255,255,255,0.5);
+    border-style: none!important;
+    outline: none;
+    border-radius: 0 !important;
 }
 
 .card-content {
