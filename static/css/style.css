@@ -119,13 +119,14 @@ html,body
 
 .accordion {
     padding-bottom: 155px;
-    background-color: rgba(255,255,255,0.8);
 
 }
 
 #accordionExample {
-    padding-bottom: 5px;
+    padding-bottom: 155px;
 }
+
+
 .collapsible-link {
     width: 100%;
     position: relative;
