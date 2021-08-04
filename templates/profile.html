@@ -36,7 +36,7 @@
                         <strong>Contact Seller</strong>
                         <p>{{ trade.gamer_tag }}</p>
                         <p><em>Listed by: {{ trade.created_by }}</em></p>
-                        <div id="#btn-row">
+                        <div class="btn-row">
                             {% if session.user|lower == trade.created_by|lower %}
                             <a href="{{ url_for('delete_trade', trade_id=trade._id) }}"><button type="button" class="btn btn-success text-center">Item Sold</button></a>
                             <a href="{{ url_for('edit_trade', trade_id=trade._id) }}">

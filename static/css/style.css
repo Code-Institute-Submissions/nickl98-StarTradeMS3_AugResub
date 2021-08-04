@@ -345,7 +345,7 @@ label {
 
 
 /* Button row */
-#btn-row {
+.btn-row {
     padding-left: 5px;
     padding-bottom: 5px;
     margin: 5px;
