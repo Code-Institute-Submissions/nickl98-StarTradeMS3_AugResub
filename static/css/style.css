@@ -350,7 +350,10 @@ label {
     padding-bottom: 5px;
     margin: 5px;
 }
-
+ /* Drop down Menu */
+ .dropdown-menu {
+     background-color: gray;
+ }
 
 /*Media quieries */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {

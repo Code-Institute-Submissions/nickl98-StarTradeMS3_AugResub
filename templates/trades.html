@@ -4,31 +4,30 @@
 <div class="hidden-bg">
     <div class="card card-content col-md-8 mx-auto">
         <h1 class="display-3 text-center">Welcome to StarTrade <i class="fas fa-star-half-alt"></i></h1>
-        <p class="lead text-center">Find the Best Trades with StarTrade here!</p>
-        <hr class="my-4" />
-        <p class="text-center">
-            <i>We even support trading card listings!</i>
-        </p>
+        <p class="lead text-center"><i>Find the Best Trades with StarTrade </i></p>
+        
     </div>
 
     <div class="card card-content col-md-8 mx-auto">
-        <h2 class="display-5 text-center">Find Trades From The Most Popular Consoles!</h2>
+        <h2 class="display-5 text-center">We offer trades from popular consoles, to even trading cards! </h2>
         <hr class="my-4"/>
-        <p class="text-center">Below you can find trades on popular Gaming Networks!</p>
+        <p class="text-center">Below are the most popular networks on the site! </p>
         <p class="text-center" id="console-icons">
             <strong><i class="fab fa-xbox"></i> <i class="fab fa-playstation"></i> <i class="fab fa-steam"></i> <i class="fab fa-internet-explorer"></i></strong>
+        </p>
+        <p class="text-center">
+            <i>Each listing has the instructions for buyers to contact the seller!</i>
         </p>
     </div>
 </div>
 <div class="card" id="trade-background">
-    <h3 class="row d-flex justify-content-center page-title">Current Trades</h3>
-
     <div class="row" id="search-bar">
+        
         <div class="card col-md-8 mx-auto" id="search-bar-background">
             <form action="{{ url_for('search') }}" method="post">
                 <div class="input-group col-12">
-                    <div class="form-outline col-lg-9 mx-auto">
-                        <label class="form-label" for="query"><strong>Search Trades</strong></label>
+                    <div class="form-outline col-12 mx-auto">
+                        <label class="form-label text-center for="query"><strong>Search Trades</strong></label>
                         <input type="text" id="query" name="query" minlength="3" class="form-control text-center mb-0" required />
 
                         <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-secondary text-center">Reset</button></a>
@@ -42,14 +41,14 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <!-- Accordion -->
-            <div id="accordionExample2" class="accordion shadow">
+            <div id="accordionExample" class="accordion shadow">
                 {% for trade in trades %}
                 <!-- Accordion item 1 -->
                 <div class="card trading-background">
                     <div class="card-header shadow-sm border-0">
                         <h2 class="mb-0">
                             <button type="button" data-toggle="collapse" data-target="#collapseOne-{{loop.index}}" aria-expanded="true" aria-controls="collapseOne" class="btn btn-link text-dark font-weight-bold text-uppercase">
-                              Trade :   {{ trade.game_name }} <i class="fas fa-caret-down"></i>
+                              {{ trade.game_name }} <i class="fas fa-caret-down"></i>
                             </button>
                             {% if trade.is_negotiable == "on" %}
                             <i class="fas fa-exclamation-circle" data-toggle="tooltip" data-placement="right" title="Trade is negotiable by seller!"></i>
