@@ -228,16 +228,16 @@ def get_consoles():
 
 @app.route("/add_console", methods=["GET", "POST"])
 def add_console():
-    """If the Admin wants to add anoher console to the platfrom
+    """If the Admin wants to add anoher Category to the platfrom
     All it does is fetches thier credentials and then allows them access
-    to the console.html. Here they can add console names into the database
+    to the console.html. Here they can add Category names into the database
     """
     if request.method == "POST":
         console = {
             "console_name": request.form.get("console_name")
         }
         mongo.db.console_type.insert_one(console)
-        flash("New Console was Added")
+        flash("New Category was Added")
         return redirect(url_for("get_consoles"))
 
     return render_template("add_console.html")
