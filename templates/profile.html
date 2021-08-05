@@ -22,14 +22,14 @@
                 <div id="headingOne" class="card-header bg-white shadow-sm border-0">
                     <h2 class="mb-0">
                         <button type="button" data-toggle="collapse" data-target="#collapseOne-{{loop.index}}" aria-expanded="true" aria-controls="collapseOne" class="btn btn-link text-dark font-weight-bold text-uppercase">
-                            Game : {{ trade.game_name }} <i class="fas fa-caret-down"></i>
+                             {{ trade.game_name }} <i class="fas fa-caret-down"></i>
                         </button>
                         {% if trade.is_negotiable == "on" %}
                         <i class="fas fa-exclamation-circle" data-toggle="tooltip" data-placement="right" title="Trade is negotiable by seller!"></i>
                         {% endif %}
                     </h2>
                 </div>
-                <div id="collapseOne-{{loop.index}}" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse">
+                <div id="collapseOne-{{loop.index}}" aria-labelledby="headingOne" data-parent="#accordionExample2" class="collapse">
                     <div class="card-body p-5">
                         <strong>Tradeable on: {{ trade.console_name }}</strong>
                         <p>{{ trade.trade_desc }}</p>
