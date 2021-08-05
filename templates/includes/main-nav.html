@@ -18,7 +18,7 @@
             </div>
         </li>
         {% if session.user|lower == "admin"|lower %}
-        <a class="nav-link" href="{{ url_for('get_consoles') }}">Manage Console</a>
+        <a class="nav-link" href="{{ url_for('get_consoles') }}">Manage Categories</a>
         {% endif %} {% else %}
         <li class="nav-item">
             <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
