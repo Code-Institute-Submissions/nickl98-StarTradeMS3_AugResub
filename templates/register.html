@@ -2,13 +2,14 @@
 
 {% block content %}
 
-<h3 class="row justify-content-center page-title">Sign Up Here!</h3>
 
-<div class="container h-100">
+
+<div class="container">
         <form class="card" method="POST" action="{{ url_for('register') }}">
             <div class="card-body">
                 <div class="row justify-content-center">
                     <div class="form-group col-12">
+                        <h3 class="row justify-content-center page-title">Sign Up Here!</h3>
                         <i class="fas fa-user-plus"></i>
                         <label for="username">Username <i>(Must be 5 characters long!)</i></label>
                         <input type="text" name="username" class="form-control" maxlength="15" minlength="5" pattern="^[a-zA-Z0-9]{5,15}$" id="username" required />
