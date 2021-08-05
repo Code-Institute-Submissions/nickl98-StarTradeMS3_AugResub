@@ -19,6 +19,9 @@ html,body
     
 }
 
+/* This is used to hide the scoll bar */
+
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -59,10 +62,6 @@ body::-webkit-scrollbar {
     z-index: 1000;
 }
 
-.dropdown-item {
-    background-color: rgba(255,255,255,0.5);
-
-}
 
 .card .trading-background {
     background-color: rgba(255,255,255,0.8);
@@ -85,10 +84,6 @@ body::-webkit-scrollbar {
 }
 
 
-#profile-text {
-    color: cadetblue;
-    font-size: 30px;
-}
 
 /* Profile spacing */
 
@@ -165,8 +160,8 @@ body::-webkit-scrollbar {
 
 body  {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-background-size: 400% 400%;
-animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -180,8 +175,6 @@ animation: gradient 15s ease infinite;
     background-position: 0% 50%;
 }
 }
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
 
 
 /* Footer css */

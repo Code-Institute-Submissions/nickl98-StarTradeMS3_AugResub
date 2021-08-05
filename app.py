@@ -255,7 +255,12 @@ def delete_console(console_id):
     return redirect(url_for("get_consoles"))
 
 
-# Invald url
+"""
+Here I created a error handler which a user will
+be directed to a custom 404.html page if they enter a wrong url
+"""
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -264,4 +269,4 @@ def page_not_found(e):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
