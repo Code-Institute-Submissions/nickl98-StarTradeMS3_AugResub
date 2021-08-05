@@ -363,7 +363,14 @@ ul.social-network li {
     font-family: 'Roboto Slab', serif;
     color: black;
 }
- 
+
+/* Seach Box */
+
+#seach-box {
+    padding-left: 35px;
+    padding-bottom: 15px;
+}
+
 label {
     color: black;
     font-size: 13px;
@@ -384,7 +391,7 @@ label {
     border: none !important;
 }
  /* Direction Cards */
- #directions {
+ .directions {
      font-size: 13px;
      font-weight: 400;
      padding-top: 15px;

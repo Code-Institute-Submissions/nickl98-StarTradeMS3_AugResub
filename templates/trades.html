@@ -15,31 +15,45 @@
         <p class="text-center" id="console-icons">
             <strong><i class="fab fa-xbox"></i> <i class="fab fa-playstation"></i> <i class="fab fa-steam"></i> <i class="fab fa-internet-explorer"></i></strong>
         </p>
-        <p class="text-center">At StarTrade we want to connect people that are willing <br>to trade something of theirs. It can be a video game, a physical item, it could even be food!</p>
+        <p class="text-center">At StarTrade we want to connect people that are willing <br>to trade something of theirs. It can be a video game, a physical item, it could even be food!<br>
+        So please sign up to get your trading adventures started! We are always here to help!</p>
         
     </div>
 </div>
 <div class="card" id="trade-background">
     <div class="row" id="search-bar">
-        
         <div class="card card-content col-md-8 mx-auto" id="search-bar-background">
             <form action="{{ url_for('search') }}" method="post">
                 <div class="input-group">
+                    
                     <div class="row">
-                        <div class="form-outline col mx-auto">
+                        <div class="col-sm">
+                            <p class="text-center directions">
+                                <i><strong>Trading Directions:</strong></i><br>
+                                <i>1. Create a Username to start listing your items.</i><br>
+                                <i>2. Once created under "seller functions" click "New Trade".</i><br>
+                                <i>3. Then fill in all the information you need for a buyer to contact you!</i><br>
+                                <i>4. Once you click list you will see your item listed!</i><br><br>
+                            </p>
+                        </div>
+                        <div class="col-sm">
+                            <p class="text-center directions">
+                                <i><strong>*Important!*</strong><br>
+                                    Please make sure to log back in and mark item as sold!</i><br>
+                                <i>Each listing has instructions for buyers to contact the seller!</i><br>
+                                <i>When seeing <i class="fas fa-exclamation-circle" data-toggle="tooltip"
+                                    data-placement="right" title="Trade is negotiable by seller!">
+                                </i> means that the seller is willing to negotiate!</i><br>
+                            </p>
+                        </div>
+                        <div id="seach-box" class="form-outline col-12">
                             <label class="form-label text-center for="query"><strong>Search Trades</strong></label>
                             <input type="text" id="query" name="query" minlength="3" class="form-control text-center mb-0" required />
                             <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-secondary text-center">Reset</button></a>
                             <button type="submit" class="btn btn-secondary">Search <i class="fas fa-search"></i></button>
                         </div>
                     </div>
-                    <div class="col">
-                        <p class="text-center" id="directions">
-                            <i>Each listing has instructions for buyers to contact the seller!</i><br>
-                            <i>When seeing <i class="fas fa-exclamation-circle" data-toggle="tooltip" data-placement="right" title="Trade is negotiable by seller!"></i> means that the seller is willing to negotiate!</i><br>
-                            <i>Also, please feel free to use our search feature; so we can save you time!</i>
-                        </p>
-                    </div>
+                    
                 </div>
             </form>
             
