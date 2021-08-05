@@ -341,6 +341,14 @@ ul.social-network li {
     font-weight: 600;
     font-size: 45px;
     font-family: 'Roboto Slab', serif;
+    color: white;
+}
+
+.page-title2 {
+    font-weight: 600;
+    font-size: 45px;
+    font-family: 'Roboto Slab', serif;
+    color: black;
 }
  
 label {

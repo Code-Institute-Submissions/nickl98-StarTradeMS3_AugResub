@@ -10,13 +10,13 @@
 
 
 <div class="row card col-md-8 mx-auto" id="back-card">
-    <h3 class="row d-flex justify-content-center center-text page-title">List a Item</h3>
+    <h3 class="row d-flex justify-content-center center-text page-title2">List a Item</h3>
     <form class="col-md-8 mx-auto" method="POST" action="{{ url_for('add_trade') }}">
         <!-- Game Title -->
         <div class="form-group row">
-            <label for="game_name" class="col-sm-8 col-form-label"><i class="fas fa-gamepad"></i> Trade Title</label>
+            <label for="game_name" class="col-sm-8 col-form-label"><i class="fas fa-gamepad"></i>Trade Name</label>
             <div class="col-sm-12">
-                <input type="text" name="game_name" minlength="5" maxlength="15" class="form-control" id="game_name" placeholder="Game Title" required />
+                <input type="text" name="game_name" minlength="5" maxlength="15" class="form-control" id="game_name" placeholder="Trade Name" required />
             </div>
         </div>
         <!-- Trade Description -->
@@ -30,18 +30,20 @@
         <div class="form-group">
             <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" name="is_negotiable" id="is_negotiable" />
-                <label class="custom-control-label" for="is_negotiable">Negotiable <i class="fas fa-exclamation-circle"></i></label>
+                <label class="custom-control-label" for="is_negotiable">Negotiable Price <i class="fas fa-exclamation-circle"></i></label>
             </div>
         </div>
 
         <!-- Console selction -->
         <div class="form-group row">
             <label for="console_name" class="col-sm-8 col-form-label">
-                <i class="fas fa-globe" data-toggle="tooltip" data-placement="right" title="Make sure you pick the correct platform in which the item residess"></i> Trading Platform
+                <i class="fas fa-globe" data-toggle="tooltip" data-placement="right"
+                title="Make sure you pick which category your trade is listed for!">
+            </i> Trading Platform / Type
             </label>
             <div class="col-sm-12">
                 <select class="custom-select" name="console_name" id="console_name" required>
-                    <option selected>Choose a console</option>
+                    <option selected>Choose a Category</option>
                     {% for console in console_type %}
                     <option value="{{ console.console_name }}">{{ console.console_name }}</option>
                     {% endfor %}
