@@ -392,9 +392,10 @@ label {
 }
  /* Direction Cards */
  .directions {
-     font-size: 13px;
+     font-size: 15px;
      font-weight: 400;
      padding-top: 15px;
+     line-height: 25px;
  }
 #bottom-card {
     padding-bottom: 150px;
