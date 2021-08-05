@@ -387,6 +387,7 @@ label {
  #directions {
      font-size: 13px;
      font-weight: 400;
+     padding-top: 15px;
  }
 #bottom-card {
     padding-bottom: 150px;
