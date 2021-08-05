@@ -9,7 +9,7 @@
     </div>
 
     <div class="card card-content col-md-8 mx-auto">
-        <h2 class="display-5 text-center">We offer trades from popular consoles, to even trading cards! </h2>
+        <h2 class="display-5 text-center">We offer trades on popular consoles, to even trading cards! </h2>
         <hr class="my-4"/>
         <p class="text-center">Below are the most popular networks on the site! </p>
         <p class="text-center" id="console-icons">
@@ -26,10 +26,10 @@
 <div class="card" id="trade-background">
     <div class="row" id="search-bar">
         
-        <div class="card col-md-8 mx-auto" id="search-bar-background">
+        <div class="card card-content col-md-8 mx-auto" id="search-bar-background">
             <form action="{{ url_for('search') }}" method="post">
-                <div class="input-group col-12">
-                    <div class="form-outline col-12 mx-auto">
+                <div class="input-group col-md-12">
+                    <div class="form-outline col-md-8 mx-auto">
                         <label class="form-label text-center for="query"><strong>Search Trades</strong></label>
                         <input type="text" id="query" name="query" minlength="3" class="form-control text-center mb-0" required />
 

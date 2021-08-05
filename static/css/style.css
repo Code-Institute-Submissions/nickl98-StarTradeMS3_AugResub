@@ -88,14 +88,18 @@ body::-webkit-scrollbar {
     font-size: 30px;
 }
 
+ .jumbotron-fluid {
+    background-color: rgba(255,255,255,0.5);
 
+}
 
 
 /* Search Bar */
 #search-bar {
-    margin-left: 2px;
-    margin-right: 2px;
+    padding: 10px;
+    padding-bottom: 15px;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 #search-bar label {
@@ -216,6 +220,13 @@ footer a {
 .footer-middle {
     padding-top: 2em;
     color: white;
+}
+
+/* form padding */
+
+form {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 
@@ -339,6 +350,8 @@ label {
 .card-content {
     background-color: rgba(255,255,255,0.8);
     overflow-x: hidden;
+    border-radius: 0 !important;
+    border: none !important;
 }
 
 #bottom-card {
