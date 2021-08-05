@@ -337,6 +337,18 @@ ul.social-network li {
 
 }
 
+/* Category Container */
+
+#category-cont {
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.card .cat-card {
+    background-color: none;
+}
+
+
 .page-title {
     font-weight: 600;
     font-size: 45px;
