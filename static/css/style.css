@@ -88,11 +88,12 @@ body::-webkit-scrollbar {
     font-size: 30px;
 }
 
- .jumbotron-fluid {
-    background-color: rgba(255,255,255,0.5);
+/* Profile spacing */
 
+#profile-list {
+    margin-top: 20px;
 }
-
+ 
 
 /* Search Bar */
 #search-bar {
@@ -132,6 +133,10 @@ body::-webkit-scrollbar {
 
 #accordionExample {
     padding-bottom: 155px;
+}
+
+#accordionExample2 {
+    padding-bottom: 5px;
 }
 
 
