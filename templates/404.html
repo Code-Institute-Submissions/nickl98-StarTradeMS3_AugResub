@@ -1,13 +1,12 @@
 {% extends "base.html" %}
-<!-- Exports header and navbar from header.html
-     or any file you want-->
+<!-- Exports header and navbar from base.html-->
 {% block content %}
-<div class="hidden-bg">
+
   <div class="card card-content col-md-8 mx-auto">
-    <h1>Oops! Looks like the page doesn't exist anymore</h1>
+    <h1>Oops! Looks like the page doesn't exist anymore :(</h1>
     <a href="{{ url_for('get_trades') }}">
       <p>Click Here
     </a>To go to the Home Page</p>
   </div>
-</div>
+
 {% endblock %}
