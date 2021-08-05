@@ -41,12 +41,11 @@
         {% block content %}
         {% endblock %}
         {% block postloadjs %}
-        <script>
+        <script type=text/javascript>
            $(document).ready(function(){
                $('.collapse').collapse();
                $('.tooltip').tooltip();
-            })
-            
+            });
         </script>
         {% endblock %}
         <footer class="mainfooter static">

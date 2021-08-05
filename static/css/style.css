@@ -362,7 +362,11 @@ label {
     border-radius: 0 !important;
     border: none !important;
 }
-
+ /* Direction Cards */
+ #directions {
+     font-size: 13px;
+     font-weight: 400;
+ }
 #bottom-card {
     padding-bottom: 150px;
 

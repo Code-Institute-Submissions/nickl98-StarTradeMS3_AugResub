@@ -4,23 +4,19 @@
 <div class="hidden-bg">
     <div class="card card-content col-md-8 mx-auto">
         <h1 class="display-3 text-center">Welcome to StarTrade <i class="fas fa-star-half-alt"></i></h1>
-        <p class="lead text-center"><i>Find the Best Trades with StarTrade </i></p>
+        <p class="lead text-center"><i>Find the Best Trades with StarTrade! </i></p>
         
     </div>
 
     <div class="card card-content col-md-8 mx-auto">
-        <h2 class="display-5 text-center">We offer trades on popular consoles, to even trading cards! </h2>
+        <h2 class="display-5 text-center">We offer trades for popular consoles and even trading cards! </h2>
         <hr class="my-4"/>
         <p class="text-center">Below are the most popular networks on the site! </p>
         <p class="text-center" id="console-icons">
             <strong><i class="fab fa-xbox"></i> <i class="fab fa-playstation"></i> <i class="fab fa-steam"></i> <i class="fab fa-internet-explorer"></i></strong>
         </p>
-        <p class="text-center">
-            <i>Each listing has the instructions for buyers to contact the seller!</i><br>
-            <i>When seeing <i class="fas fa-exclamation-circle" data-toggle="tooltip" data-placement="right" title="Trade is negotiable by seller!"></i> means that the seller is willing to negotiate!</i><br>
-            <i>Also please feel free to use our search, so that you don't have to scroll through everything.</i>
-
-        </p>
+        <p class="text-center">At StarTrade we want to connect people that are willing <br>to trade something of theirs. It can be a video game, a physical item, it could even be food!</p>
+        
     </div>
 </div>
 <div class="card" id="trade-background">
@@ -28,16 +24,25 @@
         
         <div class="card card-content col-md-8 mx-auto" id="search-bar-background">
             <form action="{{ url_for('search') }}" method="post">
-                <div class="input-group col-md-12">
-                    <div class="form-outline col-md-8 mx-auto">
-                        <label class="form-label text-center for="query"><strong>Search Trades</strong></label>
-                        <input type="text" id="query" name="query" minlength="3" class="form-control text-center mb-0" required />
-
-                        <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-secondary text-center">Reset</button></a>
-                        <button type="submit" class="btn btn-secondary">Search <i class="fas fa-search"></i></button>
+                <div class="input-group">
+                    <div class="row">
+                        <div class="form-outline col mx-auto">
+                            <label class="form-label text-center for="query"><strong>Search Trades</strong></label>
+                            <input type="text" id="query" name="query" minlength="3" class="form-control text-center mb-0" required />
+                            <a href="{{ url_for('get_trades') }}"><button type="button" class="btn btn-secondary text-center">Reset</button></a>
+                            <button type="submit" class="btn btn-secondary">Search <i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <p class="text-center"  id="directions">
+                            <i>Each listing has instructions for buyers to contact the seller!</i><br>
+                            <i>When seeing <i class="fas fa-exclamation-circle" data-toggle="tooltip" data-placement="right" title="Trade is negotiable by seller!"></i> means that the seller is willing to negotiate!</i><br>
+                            <i>Also, please feel free to use our search feature; so we can save you time!</i>
+                        </p>
                     </div>
                 </div>
             </form>
+            
         </div>
     </div>
 
