@@ -268,7 +268,7 @@ functioned correctly or easily find lost pieces of code.
   8. Now that the relevant code is pushed to Github, it can also be pushed to Heroku from the chosen branch (e.g. Master)
   9. To connect an existing repository from Github to Heroku use the following CLI syntax: `heroku git:remote -a [followed by name of Heroku app]`
   10. To push to Heroku Master Branch, then simply use `git push heroku master`
-  11. To scale dynos and run the app in Heroku, use the CLI command: `heroku ps:scale web=1`
+
   
 
 
